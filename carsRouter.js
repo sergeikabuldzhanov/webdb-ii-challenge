@@ -14,7 +14,7 @@ const router = express.Router();
 //GET Routes
 router.get("/", async (req, res, next) => {
   try {
-    const cars = await getCars();
+    const cars = await getCars({});
     res.status(200).json(cars);
   } catch (error) {
     next(error);
