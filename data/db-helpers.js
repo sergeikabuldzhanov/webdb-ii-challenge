@@ -13,16 +13,19 @@ function getCarById(id) {
     .first();
 }
 
+//CREATE helpers
 function insertCar(carData) {
   return db("cars").insert(carData);
 }
 
+//UPDATE helpers
 function updateCarById(id, carData) {
   return db("cars")
     .where({ id })
     .update(carData);
 }
 
+//DELETE helpers
 function removeCarById(id) {
   return db("cars")
     .where({ id })
